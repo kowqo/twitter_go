@@ -1,18 +1,7 @@
 package graphqlserver
 
-import "context"
+import "errors"
 
-type AuthService interface {
-	Register(ctx context.Context, input RegisterInput)
-}
-
-type RegisterInput struct {
-	Email           string
-	Username        string
-	Password        string
-	ConfirmPassword string
-}
-
-func (in *RegisterInput) Sanitize() {
-	in.Email
-}
+var (
+	ErrValidation = errors.New("validation error")
+)
