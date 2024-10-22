@@ -1,0 +1,5 @@
+package graphqlserver
+
+func main() {
+
+}
